@@ -37,7 +37,7 @@ project_type_choices = _make_choice_list([
 
 framework_lang_choices = _make_choice_list([
     strings.JAVA_UNDERTOW,
-    strings.NODE_EXPRESS,
+    strings.ECMASCRIPT_EXPRESS,
     strings.SCALA_AKKA,
 ])
 
