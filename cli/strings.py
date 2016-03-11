@@ -73,3 +73,30 @@ MATERIAL_DESIGN_LITE = \
     """Material Design Lite"""
 
 
+CHOOSE_FUNCTIONALITY_TO_INCLUDE = \
+    """Please choose which functionality to bootstrap"""
+
+USER_REGISTRATION = \
+    """Usuer Registration"""
+
+EMAIL_CONFIRMATION = \
+    """Email confirmation"""
+
+PASSWORD_RESET = \
+    """Password reset"""
+
+LOGIN_LOGOUT = \
+    """Login/Logout"""
+
+SESSION_EXPIRATION = \
+    """Session Expiry"""
+
+SESSION_EXPIRATION_1_HR = \
+    """1 hour"""
+
+SESSION_EXPIRATION_2_HR = \
+    """2 hours"""
+
+SESSION_EXPIRATION_4_HR = \
+    """4 hours"""
+
