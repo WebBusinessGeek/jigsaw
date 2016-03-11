@@ -41,9 +41,9 @@ framework_lang_choices = _make_choice_list([
     strings.SCALA_AKKA,
 ])
 
-CHOOSE_FRAMEWORK_PROMPT = "{}{}".format(strings.CHOOSE_FRAMEWORK_PROMPT_BASE, '\n')
+CHOOSE_API_FRAMEWORK_PROMPT = "{}{}".format(strings.CHOOSE_API_FRAMEWORK_PROMPT_BASE, '\n')
 for choice in framework_lang_choices:
-    CHOOSE_FRAMEWORK_PROMPT += choice[1] + '\n'
+    CHOOSE_API_FRAMEWORK_PROMPT += choice[1] + '\n'
 
 RESTFUL_AND_OR_WEB_APP_PROMPT = "{}{}".format(strings.RESTFUL_AND_OR_WEB_APP_PROMPT_BASE, '\n')
 for choice in project_type_choices:
@@ -74,7 +74,7 @@ def jigsaw(project_type):
 @click.command()
 @click.option('--framework-and-lang',
               type=click.Choice(_flatten_list_of_lists(framework_lang_choices)),
-              prompt=CHOOSE_FRAMEWORK_PROMPT)
+              prompt=CHOOSE_API_FRAMEWORK_PROMPT)
 def setup_restful_api(framework_and_lang):
     framework_and_lang = _normalize_answer(framework_lang_choices, framework_and_lang)
 
