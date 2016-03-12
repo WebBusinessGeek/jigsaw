@@ -31,6 +31,10 @@ framework_lang_cl = ChoiceList([
     strings.JAVA_UNDERTOW,
     strings.ECMASCRIPT_EXPRESS,
     strings.SCALA_AKKA,
+    strings.GO_GIN,
+    strings.CLOJURE_COMPOJURE,
+    strings.PYTHON_BOTTLE,
+    strings.RUBY_SINATRA,
 ])
 
 CHOOSE_API_FRAMEWORK_PROMPT = _build_full_prompt(framework_lang_cl.choice_list,
