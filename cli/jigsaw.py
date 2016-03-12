@@ -32,19 +32,9 @@ framework_lang_cl = ChoiceList([
     strings.ECMASCRIPT_EXPRESS,
     strings.SCALA_AKKA,
 ])
-<<<<<<< HEAD
 
-CHOOSE_API_FRAMEWORK_PROMPT = "{}{}".format(strings.CHOOSE_API_FRAMEWORK_PROMPT_BASE, '\n')
-for choice in framework_lang_choices:
-    CHOOSE_API_FRAMEWORK_PROMPT += choice[1] + '\n'
-
-RESTFUL_AND_OR_WEB_APP_PROMPT = "{}{}".format(strings.RESTFUL_AND_OR_WEB_APP_PROMPT_BASE, '\n')
-for choice in project_type_choices:
-    RESTFUL_AND_OR_WEB_APP_PROMPT += choice[1] + '\n'
-=======
-CHOOSE_FRAMEWORK_PROMPT = _build_full_prompt(framework_lang_cl.choice_list,
-                                             "{}{}".format(strings.CHOOSE_FRAMEWORK_PROMPT_BASE, '\n'))
->>>>>>> master
+CHOOSE_API_FRAMEWORK_PROMPT = _build_full_prompt(framework_lang_cl.choice_list,
+                                                      "{}{}".format(strings.CHOOSE_API_FRAMEWORK_PROMPT_BASE, '\n'))
 
 
 @click.command()
@@ -70,13 +60,8 @@ def jigsaw(project_type):
 
 @click.command()
 @click.option('--framework-and-lang',
-<<<<<<< HEAD
-              type=click.Choice(_flatten_list_of_lists(framework_lang_choices)),
-              prompt=CHOOSE_API_FRAMEWORK_PROMPT)
-=======
               type=click.Choice(_flatten_list_of_lists(framework_lang_cl.choice_list)),
-              prompt=CHOOSE_FRAMEWORK_PROMPT)
->>>>>>> master
+              prompt=CHOOSE_API_FRAMEWORK_PROMPT)
 def setup_restful_api(framework_and_lang):
     framework_and_lang = framework_lang_cl.normalize(framework_and_lang)
 
