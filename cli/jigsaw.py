@@ -36,7 +36,6 @@ framework_lang_cl = ChoiceList([
     strings.PYTHON_BOTTLE,
     strings.RUBY_SINATRA,
 ])
-
 CHOOSE_API_FRAMEWORK_PROMPT = _build_full_prompt(framework_lang_cl.choice_list,
                                                  "{}{}".format(strings.CHOOSE_API_FRAMEWORK_PROMPT_BASE, '\n'))
 
