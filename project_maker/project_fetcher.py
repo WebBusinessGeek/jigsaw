@@ -6,10 +6,6 @@ from git import Repo
 import os
 
 """
-This file holds the implementation for the class that returns an instance of a ProjectFetcher. ProjectFetchers expose a
-two static methods: one for setting the project_dict and another for fetching projects. ProjectFetcher clones into the
-current working directory for now.
-
 Usage:
 ProjectFetcher.set_project_dict(jigsaw_clone="https://github.com/webbusinessdeveloper/jigsaw.git",
                                 express="https://github.com/webbusinessdeveloper/express-dir-structure.git")
